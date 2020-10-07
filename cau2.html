@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="before"></p>
+<p id="after"></p>
+<script>
+    function tryRemoveFromArray(array, elem) {
+        let index = array.indexOf(elem);
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == elem) {
+                array.splice(index, 1);
+            }
+        }
+    }
+    let arr = [1, 2, 3, 4, 5,6,7];
+    document.getElementById('before').innerHTML = ("Mảng trước khi xóa :"+ arr.toString());
+    tryRemoveFromArray(arr, 5);
+    document.getElementById('after').innerHTML = ("Mảng sau khi xóa :"+ arr.toString());
+</script>
+</body>
+</html>
